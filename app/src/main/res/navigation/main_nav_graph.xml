@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/numberInputFragment">
+    <action
+        android:id="@+id/to_numberInputFragment"
+        app:destination="@id/numberInputFragment" />
+    <fragment
+        android:id="@+id/numberInputFragment"
+        android:name="com.vb.numbersfacts.numberInput.view.NumberInputFragment"
+        android:label="NumberInputFragment" />
+
+    <action
+        android:id="@+id/tu_numberFragment"
+        app:destination="@id/numberFragment" />
+    <fragment
+        android:id="@+id/numberFragment"
+        android:name="com.vb.numbersfacts.number.view.NumberFragment"
+        android:label="NumberFragment" >
+        <argument
+            android:name="number"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="fact"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>
